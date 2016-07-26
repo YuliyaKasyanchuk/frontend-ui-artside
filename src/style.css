@@ -135,7 +135,9 @@ h2 {
 
 .content ul li div{
     height:78px;
-   width: 92px;  
+    width: 92px;
+    background-color: black;
+    
 
 }
 

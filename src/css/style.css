@@ -17,9 +17,8 @@ body, .content p {
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
-	min-height: 99%;
 	height: auto !important;
-	height: 100%;
+	min-height: 100%;
 }
 
 h1,h2, .header div, .left-sidebar a{
@@ -101,29 +100,28 @@ h1,h2, .header div, .left-sidebar a{
    
 }
 
-.content ul{
-/*    position: absolute;*/
+.content .members{
     list-style-type: none;
-    margin-left: -35px;
+    margin: 0;
     padding: 0;
-    
-    
-    
+     
+}
+.content .member{
+    position: relative;
+    display: block;
+    width: auto;
+    margin: 0 0 18px;
+    word-wrap: break-word; 
 }
 
-.content ul li{
-  display: block; 
-}
-
-.content ul li div{
+.content .member .image{
     height:78px;
     width: 78px;
     background-color: black;
     position: relative;
-
 }
 
-.content ul li img{
+.content .member img{
     
     vertical-align: top;
     padding-bottom:  20px;
@@ -132,15 +130,23 @@ h1,h2, .header div, .left-sidebar a{
     transform: translateX(-50%);
     top:0;
     left:50%;
-  
+   
+}
+.content .block{
+    display: inline-block;
+    vertical-align: top;
 }
 
 .content .people{
     display: inline-block;
     vertical-align: top;
-    width:33%;
+    width:220px;
+    margin-right: 20px;
 }
-.content .people ul li .image{
+.content .people:last-child{
+    margin-right: 0;
+}
+.content .people .image{
 
     overflow: hidden;
     width: 78px;
@@ -158,31 +164,32 @@ h1,h2, .header div, .left-sidebar a{
     margin-bottom: 25px;
 }
 
-/* Left Sidebar
------------------------------------------------------------------------------*/
-.left-sidebar {
-	float: left;
-	width: 250px;
-	margin-left: -100%;
-}
-
-.left-sidebar ul{
+ .menu-list{
     list-style-type: none;
     padding: 0;
 }
 
-.left-sidebar a{
+ .menu-item a{
     font-size: 40px;
     font-weight: 300;
     line-height: 38px;
     text-decoration: none;
     position: relative;
     margin-left: 0;  
+     color:inherit;
 }
-.left-sidebar a:hover{
+.menu-item a:hover{
     color:white;
     background-color: rgb(112,112,112);
     
+}
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+	float: left;
+	width: 250px;
+	margin-left: -100%;
 }
 
 /* Footer
@@ -199,15 +206,15 @@ h1,h2, .header div, .left-sidebar a{
     font-weight: 400;
     line-height: 15px;
     letter-spacing:1px;
+    box-sizing: border-box;
 }
 
 .footer div {
     display: block;
+     vertical-align: top;
     position: absolute;
     width: 99px;  
     margin-top: 40px;
-    
-
 }
 
 .footer  a{
